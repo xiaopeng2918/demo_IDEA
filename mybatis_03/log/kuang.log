@@ -1,0 +1,15 @@
+[DEBUG][21-10-09][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-10-09][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+[DEBUG][21-10-09][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-10-09][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-10-09][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-10-09][org.apache.ibatis.datasource.pooled.PooledDataSource]PooledDataSource forcefully closed/removed all connections.
+[DEBUG][21-10-09][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Opening JDBC Connection
+[DEBUG][21-10-09][org.apache.ibatis.datasource.pooled.PooledDataSource]Created connection 339924917.
+[DEBUG][21-10-09][org.apache.ibatis.transaction.jdbc.JdbcTransaction]Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@1442d7b5]
+[DEBUG][21-10-09][top.yxp2918.mapper.InfoMapper.getInfoList]==>  Preparing: select * from user.info 
+[DEBUG][21-10-09][top.yxp2918.mapper.InfoMapper.getInfoList]==> Parameters: 
+[DEBUG][21-10-09][top.yxp2918.mapper.InfoMapper.getInfoList]<==      Total: 6
+[INFO][21-10-09][top.yxp2918.mapper.InfoMapperTest]info: 进入了 testLog4j
+[DEBUG][21-10-09][top.yxp2918.mapper.InfoMapperTest]debug
+[ERROR][21-10-09][top.yxp2918.mapper.InfoMapperTest]error 错误信息

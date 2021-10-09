@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间  namespace 对应mapper接口的包名路径-->
+<mapper namespace="top.yxp2918.mapper.BlogMapper">
+<!--    sql片段-->
+    <sql id="titleOrAuthor">
+        <if test="title != null">
+            title = #{title}
+        </if>
+        <if test="author != null">
+            AND author = #{author}
+        </if>
+    </sql>
+<!--    if动态查询-->
+    <select id="queryBlogsIf" parameterType="map" resultType="Blog">
+        select * from blog
+        <where>
+            <include refid="titleOrAuthor"></include>
+        </where>
+    </select>
+<!--    choose动态查询-->
+    <select id="queryBlogsChoose" parameterType="map" resultType="Blog">
+        select * from blog
+        <where>
+            <choose>
+                <when test="title != null">
+                    title = #{title}
+                </when>
+                <when test="author != null">
+                   AND author = #{author}
+                </when>
+                <otherwise>
+                    AND 1 = 1
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+<!--    set更新博客-->
+    <update id="updateBlogSet" parameterType="Blog">
+        update blog
+        <set>
+            <if test="author != null">
+                author = #{author},
+            </if>
+            <if test="title != null">
+                title = #{title}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+<!--    添加博客-->
+    <insert id="addBlog" parameterType="Blog">
+        insert into blog(id,title,create_time,author,views) values(#{id},#{title},#{creatTime},#{author},#{views})
+    </insert>
+</mapper>

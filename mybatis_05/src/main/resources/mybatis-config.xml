@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心配置文件-->
+<configuration>
+<!--    属性-->
+    <properties resource="db.properties"/>
+    <!--    日志打印-->
+
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
+<!--    </settings>-->
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+<!--    类型别名-->
+    <typeAliases>
+        <typeAlias type="top.yxp2918.pojo.Student" alias="Student" />
+        <typeAlias type="top.yxp2918.pojo.Teacher" alias="Teacher" />
+    </typeAliases>
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+<!--                链接url-->
+                <property name="url" value="${url}"/>
+<!--                数据库账户-->
+                <property name="username" value="${username}"/>
+<!--                数据库密码-->
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+<!--        每一个mapper xml文件都需要在这里一一注册-->
+        <mapper class="top.yxp2918.mapper.StudentMapper"/>
+        <mapper class="top.yxp2918.mapper.TeacherMapper"/>
+    </mappers>
+</configuration>
