@@ -1,4 +1,4 @@
-package top.yxp2918.dao;
+package top.yxp2918.mapper;
 
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
@@ -68,7 +68,7 @@ public class InfoMapperTest {
     public void deleteInfo(){
         try(SqlSession sqlSession = MybatisTest1.getSqlSession()){
             InfoMapper mapper = sqlSession.getMapper(InfoMapper.class);
-            int i = mapper.deleteInfo(4);
+            int i = mapper.deleteInfo(3);
             if (i > 0){
                 System.out.println("删除成功");
             }

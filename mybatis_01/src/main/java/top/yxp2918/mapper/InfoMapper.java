@@ -1,4 +1,4 @@
-package top.yxp2918.dao;
+package top.yxp2918.mapper;
 
 import top.yxp2918.pojo.Info;
 

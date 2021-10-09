@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间  namespace 对应mapper接口的包名路径-->
-<mapper namespace="top.yxp2918.dao.InfoMapper">
+<mapper namespace="top.yxp2918.mapper.InfoMapper">
 <!--    id对应接口内抽象方法         resultType与实体类Info对应-->
 <!--    查询全部用户-->
     <select id="getInfoList" resultType="top.yxp2918.pojo.Info">

@@ -20,6 +20,6 @@
     </environments>
     <mappers>
 <!--        每一个mapper xml文件都需要在这里一一注册-->
-        <mapper resource="top/yxp2918/dao/InfoDao.xml"/>
+        <mapper resource="top/yxp2918/mapper/InfoDao.xml"/>
     </mappers>
 </configuration>
